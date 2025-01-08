@@ -50,7 +50,11 @@ const Player = ({navigation, route}) => {
         source={{uri: item.image}}>
         <Header c_back />
         <View style={styles.Image}>
-          <Image style={GlobalStyle.Image} source={{uri: item.image}} />
+          <Image
+            style={GlobalStyle.Image}
+            resizeMode="contain"
+            source={{uri: item.image}}
+          />
         </View>
         <Text
           numberOfLines={2}
@@ -78,7 +82,8 @@ const Player = ({navigation, route}) => {
           ]}>
           <Text style={[GlobalStyle.TextShadow, styles.time]}>21:50</Text>
           <Text style={[GlobalStyle.TextShadow, styles.time]}>
-            {item.timing}
+            30:00
+            {/* {item.timing} */}
           </Text>
           <Text style={[GlobalStyle.TextShadow, styles.time]}>-1:0.6:15</Text>
         </View>
@@ -119,12 +124,12 @@ const Player = ({navigation, route}) => {
 const styles = StyleSheet.create({
   Image: {
     width: width / 1.3,
-    height: height / 3.5,
-    resizeMode: 'cover',
+    height: height / 2.5,
     borderRadius: s(15),
     alignSelf: 'center',
     marginTop: s(10),
     overflow: 'hidden',
+    backgroundColor: 'black',
   },
   book_name: {
     fontFamily: Font.Work600Italic,

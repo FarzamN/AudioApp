@@ -25,7 +25,38 @@ import SortingModal from '../../../components/Modals/SortingModal';
 
 const UserLibrary = ({navigation}) => {
   const dispatch = useDispatch();
-  const books = useSelector(state => state.books);
+  // const books = useSelector(state => state.books);
+  const books = [
+    {
+      image: 'https://bookeve.pk/wp-content/uploads/2024/09/819hz4I82RL.jpg',
+      title: 'The Story of a New Name',
+      artist: 'Elena Ferrante',
+      progress: 0.2,
+      timing: '20 minuts',
+    },
+    {
+      image: 'https://readings.com.pk/images/books/9780756404741.jpg',
+      title: 'The Name Of the Wind',
+      artist: 'patrick rothfuss',
+      progress: 0.2,
+      timing: '70 minuts',
+    },
+    {
+      image: 'https://mpd-biblio-covers.imgix.net/9781250169440.jpg?w=600dpr=1',
+      title: 'Call Me by Your Name',
+      artist: 'André Aciman',
+      progress: 0.7,
+      timing: '10 minuts',
+    },
+    {
+      image:
+        'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1311999970i/172763.jpg',
+      title: 'The Book of Names',
+      artist: 'Jill Gregory, Karen Tintori',
+      progress: 0.5,
+      timing: '20 minuts',
+    },
+  ];
 
   const [load, setLoad] = useState(false);
   const [sort, setSort] = useState(false);
@@ -61,7 +92,7 @@ const UserLibrary = ({navigation}) => {
       navigation.getParent()?.setOptions({
         tabBarStyle: GlobalStyle.showBar,
       });
-      dispatch(audio_data(setLoad));
+      // dispatch(audio_data(setLoad));
     }, []),
   );
   // useEffect(() => {
@@ -103,17 +134,15 @@ const UserLibrary = ({navigation}) => {
       <SortingModal visible={sort} onClose={onClose}>
         <FlatList
           data={sorting}
-          renderItem={({item, index}) => {
-            return (
-              <Pressable
-                style={{overflow: 'hidden'}}
-                android_ripple={GlobalStyle.Yellow_Ripple}
-                // onPress={() => handleSort(item)}
-                key={index}>
-                <Text style={styles.title}>{item.title}</Text>
-              </Pressable>
-            );
-          }}
+          renderItem={({item}) => (
+            <Pressable
+              style={{overflow: 'hidden'}}
+              android_ripple={GlobalStyle.Yellow_Ripple}
+              // onPress={() => handleSort(item)}
+            >
+              <Text style={styles.title}>{item.title}</Text>
+            </Pressable>
+          )}
         />
       </SortingModal>
     </SafeAreaView>

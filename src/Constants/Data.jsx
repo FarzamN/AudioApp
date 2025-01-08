@@ -146,41 +146,41 @@ export const LanguageData = [
 ];
 
 export const chapterData = [
-  {title: 'Opening Credits', id: 1, time: '00:16'},
-  {title: 'A note for you', id: 2, time: '00:16'},
-  {title: 'introduction', id: 3, time: '00:16'},
+  {title: 'Opening Credits', id: 1, time: '00:00'},
+  {title: 'A note for you', id: 2, time: '00:30'},
+  {title: 'introduction', id: 3, time: '00:47'},
   {
     title:
       'Wake up to reality! Nothing ever goes as planned in this accursed world. wherever there is light,',
     id: 4,
-    time: '00:16',
+    time: '00:60',
     chap: 1,
   },
   {
     title:
       ' The longer you live, the more you realize that the only things that truly exist in this reality are merely pain, suffering and futility. Listen, everywhere you look in this world,',
     id: 5,
-    time: '00:16',
+    time: '01:15',
     chap: 2,
   },
   {
     title: 'there will always be shadows to be found as well.',
     id: 6,
-    time: '00:16',
+    time: '01:50',
     chap: 2,
   },
   {
     title:
       'As long as there is a concept of victors, the vanquished will also exist. The selfish intent of wanting to preserve peace, ',
     id: 7,
-    time: '00:16',
+    time: '02:16',
     chap: 3,
   },
   {
     title:
       'initiates war and hatred is born in order to protect love. There are nexuses causal relationships that cannot be separated.',
     id: 8,
-    time: '00:16',
+    time: '03:00',
     chap: 4,
   },
 ];
